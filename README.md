@@ -1,2 +1,5 @@
 # 16s-Listex
 16S metagenomic analysis of the paper entitled: ‘Industrial-scale application of bacteriophages in baby spinach: a one-year study on Listeria control, quality and changes in the microbial community’.
+- This repository contains R workflows for 16S rRNA microbiome analysis, starting from a DADA2-based phyloseq object and converted MPSE objects.
+- The script `DA_analisis_final.R` runs five genus-level differential abundance analyses with ANCOM-BC2, targeting phage treatment effects, storage temperature effects, and storage-time effects. It integrates the ANCOM-BC2 outputs into a unified matrix and generates a publication-ready ComplexHeatmap of log fold changes plus UpSet plots summarizing overlaps of differentially abundant genera.
+- The script `abundances_mpse.R` uses MicrobiotaProcess to compute and visualise relative abundances at phylum, family, and genus level across six biologically defined groups (treatment × temperature × time). It cleans taxonomic labels, produces high-quality barplots, and annotates them with the global relative abundance of Listeriaceae/Listeria for transparent pathogen-focused interpretation.
